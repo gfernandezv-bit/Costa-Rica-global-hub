@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Rica Tech Hub | Costa Rica Global Hub</title>
+
+    <!-- Fuente, CSS y JavaScript -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/landing.css">
+    
+</head>
+<body class="pagina-landing">
+
+    <!-- 1. ENCABEZADO Y MENÚ y LOGO-->
+    <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="logo de landing">
+                <span>Costa Rica Global Hub</span>
+            </a>
+            <!-- Botón hamburguesa para celular -->
+            <button class="boton-menu" id="boton-menu" type="button"
+                    aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Enlaces del menú -->
+            <nav id="menu-principal" aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sectores.html">Sectores</a></li>
+                    <li><a href="exportaciones.html">Exportaciones</a></li>
+                    <li><a href="inversion.html">Inversión</a></li>
+                    <li><a href="hubs.html">Hubs</a></li>
+                    <li><a href="landing.html" class="activo" aria-current="page">Tech Hub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO PRINCIPAL -->
+        <section class="hero hero-landing" id="inicio">
+            <div class="contenedor hero-contenido">
+                <div class="hero-texto">
+                    <h1 class="hero-etiqueta">Innovacion en  Costa Rica</h1>
+                    <h2>Construye tu futuro desde Costa Rica</h2>
+                    <p>Talento, tecnología e innovación para conectar grandes ideas con oportunidades globales.</p>
+                    <a href="#contacto" class="boton boton-verde">Explorar oportunidades</a>
+                </div>
+
+                <div class="hero-fotografia">
+                    <img src="img/image.png" alt="Profesionales trabajando en tecnología">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. VENTAJAS DE COSTA RICA -->
+        <section class="seccion" id="ventajas">
+            <div class="contenedor">
+                <h2>¿Por qué elegir Costa Rica?</h2>
+                <p>Costa Rica ofrece ventajas para empresas que buscan talento, innovación y crecimiento.</p>
+
+                <div class="rejilla">
+                    <article class="tarjeta">
+                        <img src="svg/talento.svg" alt="" class="icono">
+                        <h3>Talento humano</h3>
+                        <p>Profesionales preparados para desarrollar proyectos tecnológicos.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="svg/innovacion.svg" alt="" class="icono">
+                        <h3>Innovación</h3>
+                        <p>Desarrollo de nuevas soluciones digitales.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="svg/sostenibilidad.svg" alt="" class="icono">
+                        <h3>Sostenibilidad</h3>
+                        <p>Compromiso con el desarrollo responsable y la protección ambiental.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="svg/ubicacion.svg" alt="" class="icono">
+                        <h3>Conectividad</h3>
+                        <p>Conexión con diferentes mercados internacionales.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ECOSISTEMA TECNOLÓGICO -->
+        <section class="seccion fondo-claro" id="tecnologia">
+            <div class="contenedor contenido-flex">
+                <div class="columna">
+                    <img src="img/foto2.webp" alt="Profesionales trabajando con tecnología" class="imagen-seccion">
+                </div>
+
+                <div class="columna">
+                    <h2>Technology Ecosystem</h2>
+                    <p>Costa Rica cuenta con empresas, profesionales y comunidades que promueven el desarrollo tecnológico.</p>
+                    <p>La colaboración y la innovación generan oportunidades para nuevos proyectos.</p>
+                    <a href="hubs.html" class="boton boton-verde">Conocer nuestros hubs</a>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- 5. ÁREAS ESTRATÉGICAS -->
+<section class="seccion" id="areas">
+    <div class="contenedor">
+
+        <h2>Áreas estratégicas</h2>
+        <p>Conocé las principales áreas de desarrollo tecnológico en Costa Rica.</p>
+
+        <div class="rejilla">
+
+            <!-- Tarjeta 1 -->
+            <article class="tarjeta">
+                <img src="svg/software.svg" alt="" class="icono">
+                <h3>Desarrollo de software</h3>
+                <p>Creación de aplicaciones, plataformas y soluciones digitales.</p>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta">
+                <img src="svg/ciberseguridad.svg" alt="" class="icono">
+                <h3>Ciberseguridad</h3>
+                <p>Protección de sistemas, redes e información digital.</p>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="tarjeta">
+                <img src="svg/inteligencia.svg" alt="" class="icono">
+                <h3>Inteligencia artificial</h3>
+                <p>Desarrollo de herramientas y soluciones basadas en datos.</p>
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="tarjeta">
+                <img src="svg/servicios.svg" alt="" class="icono">
+                <h3>Servicios tecnológicos</h3>
+                <p>Soporte y soluciones tecnológicas para empresas internacionales.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- 6. TALENTO HUMANO -->
+        <section class="seccion fondo-claro" id="talento">
+            <div class="contenedor contenido-flex">
+                <div class="columna">
+                    <h2>Talento</h2>
+                    <p>El talento humano es uno de los recursos más importantes para el desarrollo tecnológico de Costa Rica.</p>
+                    <p>La formación académica y las habilidades digitales permiten participar en proyectos de innovación.</p>
+                </div>
+
+                <div class="columna">
+                    <img src="img/hub-formacion.webp" alt="Estudiantes preparándose en tecnología" class="imagen-seccion">
+                </div>
+            </div>
+        </section>
+
+
+<!-- 7. HISTORIAS DE ÉXITO -->
+<section class="seccion" id="historias">
+    <div class="contenedor">
+
+        <h2>Historias de éxito</h2>
+        <p>Ejemplos de cómo la tecnología puede impulsar nuevas oportunidades.</p>
+
+        <div class="rejilla">
+
+            <!-- Tarjeta 1 -->
+            <article class="tarjeta">
+                <img src="img/emprendimiento_digital.webp"
+                     alt="Profesionales desarrollando un proyecto digital">
+                <h3>Emprendimiento digital</h3>
+                <p>Los emprendimientos tecnológicos desarrollan herramientas para resolver necesidades del mercado.</p>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta">
+                <img src="img/innovacion_empresarial.webp"
+                     alt="Innovación tecnológica en una empresa">
+                <h3>Innovación empresarial</h3>
+                <p>Las empresas incorporan nuevas tecnologías para mejorar sus productos y servicios.</p>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="tarjeta">
+                <img src="img/formacion_profesional.webp"
+                     alt="Estudiantes aprendiendo tecnología">
+                <h3>Formación profesional</h3>
+                <p>La educación tecnológica abre oportunidades para nuevos profesionales.</p>
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="tarjeta">
+                <img src="img/ecoturismo.webp"
+                     alt="Turista disfrutando de la naturaleza de Costa Rica">
+                <h3>Ecoturismo</h3>
+                <p>El ecoturismo es fundamental porque atrae turistas a Costa Rica y promueve el cuidado de la naturaleza.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- 8. SOSTENIBILIDAD -->
+<section class="seccion fondo-claro" id="sostenibilidad">
+    <div class="contenedor">
+
+        <h2>Sostenibilidad</h2>
+        <p>Costa Rica promueve iniciativas relacionadas con la sostenibilidad, la protección ambiental y el uso responsable de los recursos.</p>
+
+        <div class="rejilla">
+
+            <!-- Tarjeta 1: Energías renovables -->
+            <article class="tarjeta">
+                <img src="img/energias_renovables.webp"
+                     alt="Paneles solares y energía eólica">
+
+                <h3>Energías renovables</h3>
+                <p>Aprovechamiento de recursos naturales para la generación de energía.</p>
+            </article>
+
+            <!-- Tarjeta 2: Tecnología sostenible -->
+            <article class="tarjeta">
+                <img src="img/tecnologia_sostenible.webp"
+                     alt="Profesionales trabajando con tecnología sostenible">
+
+                <h3>Tecnología sostenible</h3>
+                <p>Soluciones que buscan reducir el impacto ambiental.</p>
+            </article>
+
+            <!-- Tarjeta 3: Desarrollo responsable -->
+            <article class="tarjeta">
+                <img src="img/desarrollo_responsable.webp"
+                     alt="Profesionales planificando proyectos sostenibles">
+
+                <h3>Desarrollo responsable</h3>
+                <p>Crecimiento económico acompañado de prácticas sostenibles.</p>
+            </article>
+
+            <!-- Tarjeta 4: Turismo ecológico -->
+            <article class="tarjeta">
+                <img src="img/turismo_ecologico.webp"
+                     alt="Turistas disfrutando de un bosque tropical">
+
+                <h3>Turismo ecológico</h3>
+                <p>Crecimiento turístico enfocado en prácticas sostenibles.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+        
+
+        
+
+        <!-- 9. PREGUNTAS FRECUENTES -->
+        <section class="seccion" id="faq">
+            <div class="contenedor">
+                <h2>Preguntas frecuentes</h2>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" type="button" aria-expanded="false">¿Qué es Costa Rica Tech Hub?</button>
+                    <div class="faq-respuesta">
+                        <p>Es una iniciativa presentada en este proyecto académico para mostrar oportunidades tecnológicas en Costa Rica.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" type="button" aria-expanded="false">¿Qué sectores tecnológicos se destacan?</button>
+                    <div class="faq-respuesta">
+                        <p>Desarrollo de software, servicios digitales, ciberseguridad e innovación.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" type="button" aria-expanded="false">¿Cómo puedo conocer más?</button>
+                    <div class="faq-respuesta">
+                        <p>Podés explorar las otras páginas del sitio y consultar la sección de contacto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. CONTACTO -->
+        <section class="seccion fondo-claro" id="contacto">
+            <div class="contenedor">
+                <h2>Let's build together</h2>
+                <p>¿Te interesa conocer más sobre las oportunidades tecnológicas de Costa Rica?</p>
+                <p>Explorá nuestro sitio para descubrir sectores, exportaciones, inversión y centros de innovación.</p>
+                <a href="index.html" class="boton boton-verde">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+   <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50688888888"
+    class="whatsapp-flotante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+
+    </a>
+
+    <!-- Botón para regresar al inicio -->
+    <button id="scroll-top"
+            type="button"
+            aria-label="Volver arriba">
+        ↑
+    </button>
+
+    <!-- 11. PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2026 Costa Rica Global Hub. Proyecto académico de Diseño Web 1.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript de la landing -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

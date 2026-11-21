@@ -1,0 +1,594 @@
+/* =========================================================
+   COSTA RICA GLOBAL HUB - LANDING (TECH HUB)
+   Diseño Mobile First: celular, tableta y escritorio
+   Archivo: css/landing.css
+   ========================================================= */
+
+/* 1. COLORES PRINCIPALES */
+:root {
+    --color-primario: #103b5c;
+    --color-secundario: #146b57;
+    --color-fondo: #f4f7fa;
+    --color-suave: #e8f6f1;
+    --color-blanco: #ffffff;
+    --color-texto: #243444;
+}
+
+/* 2. ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--color-primario);
+    line-height: 1.25;
+}
+
+section {
+    scroll-margin-top: 5rem;
+}
+
+
+/* 3. ENCABEZADO Y LOGO */
+/* Encabezado principal */
+.encabezado {
+    background-color: var(--color-primario);
+    padding: 1rem 0;
+}
+
+
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Logo y título del sitio */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-blanco);
+    font-size: 1.2rem;
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+/* Tamaño de la imagen */
+.logo img {
+    width: 70px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+/* 4. MENÚ HAMBURGUESA Y NAVEGACIÓN */
+.boton-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-blanco);
+    border-radius: 3px;
+}
+
+#menu-principal {
+    display: none;
+    width: 100%;
+}
+
+#menu-principal.abierto {
+    display: block;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Verde al pasar el mouse y en la página actual */
+.menu a:hover,
+.menu a.activo,
+.menu a[aria-current="page"] {
+    color: #0fe88d;
+}
+
+/* 5. HERO PRINCIPAL DE LA LANDING */
+.pagina-landing .hero-landing {
+    /* Este degradado es el fondo claro actual del Hero */
+    background: linear-gradient(135deg, #e8f6f1, #edf6fc);
+    color: #173e38;
+    padding: 3.5rem 0;
+}
+
+.pagina-landing .hero-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Texto del Hero: sin altura reservada en celular */
+.pagina-landing .hero-texto {
+    width: 100%;
+    min-width: 0;
+    flex: none;
+}
+
+/* AQUÍ CAMBIAS EL COLOR DE "INNOVACIÓN DESDE COSTA RICA" */
+#inicio .hero-etiqueta {
+    color: #146b57;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+/* Título grande del Hero */
+.pagina-landing .hero-landing h2 {
+    color: #173e38;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+    margin: 0.75rem 0 1rem;
+}
+
+/* Descripción */
+.pagina-landing .hero-texto > p:not(.hero-etiqueta) {
+    color: #244e47;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+/* Fotografía: cerca del botón en celular */
+.pagina-landing .hero-fotografia {
+    display: flex;
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina-landing .hero-fotografia img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 6. BOTONES */
+.boton {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-verde {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.boton:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    transform: translateY(-3px);
+}
+
+.pagina-landing .hero-landing .boton {
+    margin-top: 0;
+    padding: 0.85rem 1.5rem;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.pagina-landing .hero-landing .boton:hover {
+    background-color: var(--color-primario);
+}
+
+/* 7. SECCIONES GENERALES */
+.seccion {
+    padding: 4rem 0;
+}
+
+.seccion h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-top: 0;
+}
+
+.seccion p {
+    color: #526273;
+}
+
+.fondo-claro {
+    background-color: var(--color-suave);
+}
+
+/* 8. TARJETAS Y CUADRÍCULA */
+.rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid #e3eaf0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.icono {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Fotografías de sostenibilidad */
+#sostenibilidad .tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* 9. SECCIONES CON IMAGEN Y TEXTO */
+.contenido-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.columna {
+    width: 100%;
+    min-width: 0;
+}
+
+.imagen-seccion {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* 10. AJUSTES DE SECCIONES DE LANDING */
+#ventajas {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+#ventajas h2,
+#tecnologia h2 {
+    color: var(--color-primario);
+}
+
+#ventajas .contenedor {
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+#ventajas .rejilla {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+/* Efecto Parallax en Sostenibilidad */
+#sostenibilidad {
+    background-image:
+        linear-gradient(
+            rgba(0, 35, 45, 0.45),
+            rgba(0, 35, 45, 0.45)
+        ),
+        url("../img/volcan_arenal.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* Título y descripción sobre el fondo */
+#sostenibilidad h2,
+#sostenibilidad > .contenedor > p {
+    color: white;
+}
+/* 11. PREGUNTAS FRECUENTES (FAQ) */
+.faq-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--color-blanco);
+    border: 1px solid #dddddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.faq-pregunta {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    background: transparent;
+    color: var(--color-primario);
+    border: none;
+    text-align: left;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-pregunta:hover {
+    background-color: #edf6fc;
+}
+
+.faq-pregunta::after {
+    content: "+";
+    float: right;
+    font-size: 1.3rem;
+}
+
+.faq-item.activa .faq-pregunta::after {
+    content: "−";
+}
+
+.faq-respuesta {
+    display: none;
+    padding: 1rem 1.2rem 1.2rem;
+}
+
+.faq-item.activa .faq-respuesta {
+    display: block;
+}
+
+.faq-respuesta p {
+    margin: 0;
+}
+
+/* 12. CONTACTO Y FOOTER */
+#contacto {
+    text-align: center;
+}
+
+#contacto p {
+    max-width: 650px;
+    margin: 1rem auto;
+}
+
+.pie-pagina {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.pie-pagina p {
+    margin: 0;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.whatsapp-flotante:hover {
+    background-color: #128c7e;
+}
+/* Tamaño del icono de WhatsApp */
+.whatsapp-flotante i {
+    font-size: 32px;
+    color: white;
+}
+
+/* Botón ScrollTop */
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+#scroll-top:hover {
+    background-color: var(--color-secundario);
+}
+
+/* 13. NAVEGACIÓN INTERNA (SI SE UTILIZA) */
+.navegacion-interna {
+    background-color: var(--color-secundario);
+    padding: 1rem 0;
+}
+
+.navegacion-interna .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.navegacion-interna a {
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.navegacion-interna a:hover {
+    text-decoration: underline;
+}
+
+/* En landing.html se oculta la navegación interna */
+.pagina-landing .navegacion-interna {
+    display: none;
+}
+
+
+/* Animación de entrada suave */
+@keyframes entradaSuave {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   14. TABLETA - DESDE 576 PX
+   ========================================================= */
+@media (min-width: 576px) {
+    .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-landing {
+        padding: 5rem 0;
+    }
+
+    .seccion {
+        padding: 5rem 0;
+    }
+}
+
+/* =========================================================
+   15. ESCRITORIO - DESDE 992 PX
+   ========================================================= */
+@media (min-width: 992px) {
+    .boton-menu {
+        display: none;
+    }
+
+    #menu-principal {
+        display: block;
+        width: auto;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    /* Hero: texto a la izquierda y fotografía a la derecha */
+    .pagina-landing .hero-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .pagina-landing .hero-texto {
+        flex: 1 1 17rem;
+        width: auto;
+    }
+
+    .pagina-landing .hero-fotografia {
+        flex: 2 1 25rem;
+        width: auto;
+    }
+
+    .rejilla {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    /* Secciones con fotografía y texto, lado a lado */
+    .contenido-flex {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .columna {
+        flex: 1;
+    }
+
+    /* Activar Parallax */
+    #sostenibilidad {
+        background-attachment: fixed;
+    }
+}

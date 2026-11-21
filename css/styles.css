@@ -1,0 +1,587 @@
+
+/* 1. Colores principales */
+
+:root {
+    --color-primario: #103b5c;
+    --color-secundario: #146b57;
+    --color-fondo: #f4f7fa;
+    --color-blanco: #ffffff;
+    --color-texto: #243444;
+}
+
+
+/* 2. Estilos generales */
+
+/* Controla el tamaño de los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Permite desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Hace que las imágenes sean adaptables */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 3. Contenedor principal */
+
+/* Centra el contenido de la página */
+.contenedor {
+    width: 90%;
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+
+/* 4. Encabezado */
+
+/* Color de fondo del encabezado */
+.encabezado {
+    background-color: var(--color-primario);
+    padding: 1rem 0;
+}
+
+/* Organiza el logo y el menú */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Estilo del nombre del sitio */
+
+/* Logo y título del sitio */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-blanco);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Tamaño de la imagen */
+.logo img {
+    width: 70px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* 5. Menú de navegación */
+
+/* Organiza los enlaces */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Color y estilo de los enlaces */
+.menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Cambia el color al pasar el mouse */
+.menu a:hover ,
+.menu a.activo{
+    color: #0fe88d;
+
+}
+
+
+/* 6. Botón del menú hamburguesa */
+
+/* Botón para celular y tableta */
+.boton-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Dibuja las tres líneas */
+.boton-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform 0.3s;
+}
+
+/* Cambia el fondo cuando está activo */
+.boton-menu.activo {
+    background-color: #146b57;
+    border-color: #0fe88d;
+}
+
+/* Cambia el color de las líneas */
+.boton-menu.activo span {
+    background-color: #0fe88d;
+}
+
+/* Hace más corta la línea del centro */
+.boton-menu.activo span:nth-child(2) {
+    width: 19px;
+}
+
+
+
+/* 7. Navegación para celular */
+
+/* Oculta inicialmente el menú */
+#menu-principal {
+    display: none;
+    width: 100%;
+}
+
+/* Muestra el menú al presionar el botón */
+#menu-principal.abierto {
+    display: block;
+}
+
+/* Organiza los enlaces verticalmente */
+#menu-principal .menu {
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+
+/* 8. Hero principal de index.html */
+
+/* Imagen del volcán Arenal como fondo */
+.hero-principal {
+    background-image:
+        linear-gradient(
+            90deg,
+         rgba(12, 42, 65, 0.90) 0%,
+            rgba(24, 64, 85, 0.65) 50%,
+            rgba(40, 90, 110, 0.35) 100%
+        ),
+        url("../img/volcan_arenal.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #103b5c;
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+}
+
+/* Organiza el Hero verticalmente en celular */
+.hero-principal .hero-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Contenedor del texto */
+.hero-principal .hero-texto {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Título Costa Rica */
+.hero-principal h1 {
+    color: white;
+    font-size: 2.3rem;
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    animation: rntradasuave 2.5s ease-out;
+
+}
+
+/* Título Global Hub en verde */
+.hero-principal h1 span {
+    display: block;
+    color: #a8e063;
+}
+
+/* Párrafo del Hero */
+.hero-principal p {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 35rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+/* 10. Botones generales */
+
+/* Estilo de los botones del sitio */
+.boton {
+    display: inline-block;
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+/* Botones de color verde */
+.boton-verde {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* Cambio de color del botón verde */
+.boton-verde:hover {
+    background-color: var(--color-primario);
+}
+
+
+/* 11. Botón del Hero */
+
+/* Botón Explorar sectores */
+.hero-principal .boton {
+    background-color: #146b57;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+}
+
+/* Cambio de color al pasar el mouse */
+.hero-principal .boton:hover {
+    background-color: #0b4b3d;
+}
+
+
+/* 12. Secciones generales */
+
+/* Espaciado de las secciones */
+.seccion {
+    padding: 4rem 0;
+}
+
+/* Títulos de las secciones */
+.seccion h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+}
+
+/* Fondo claro de algunas secciones */
+.fondo-claro {
+    background-color: #e8f0f5;
+}
+
+
+/* 13. Rejilla de tarjetas */
+
+/* Una columna para celular */
+.rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/* 14. Diseño de las tarjetas */
+
+/* Fondo, bordes y sombras */
+.tarjeta {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.8rem #00000015;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Títulos de las tarjetas */
+.tarjeta h3 {
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+}
+
+/* Movimiento al pasar el mouse */
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem #00000025;
+}
+
+
+/* 15. Iconos */
+
+/* Tamaño de los iconos */
+.icono {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+/* Iconos de las nuevas tarjetas */
+.icono-emoji {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+
+
+/* 16. Fotografías de las secciones */
+
+/* Imágenes principales */
+.imagen-seccion {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Fotografías dentro de las tarjetas */
+.imagen-tarjeta {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+
+/* 17. Contenido con Flexbox */
+
+/* Contenido vertical en celular */
+.contenido-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Columnas de texto y fotografías */
+.columna {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* 18. Indicadores de Costa Rica */
+
+/* Diseño de indicadores */
+.indicador {
+    text-align: center;
+    border-top: 0.3rem solid var(--color-secundario);
+}
+
+/* Títulos o números */
+.indicador h3 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+}
+
+/* Descripción de los indicadores */
+.indicador p {
+    font-size: 1rem;
+}
+
+
+/* 19. Pie de página */
+
+/* Estilos del Footer */
+.pie-pagina {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Animación de entrada */
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 20. Diseño Responsive para tableta */
+/* Media Query desde 576px */
+
+@media (min-width: 576px) {
+
+    /* Tarjetas en dos columnas */
+    .rejilla,
+    #ventajas .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Ancho del contenedor */
+    .contenedor {
+        width: 90%;
+        max-width: 960px;
+    }
+
+    /* Contenido horizontal */
+    .contenido-flex {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* Columnas adaptables */
+    .columna {
+        flex: 1 1 250px;
+    }
+
+    /* Tamaño de los títulos */
+    .seccion h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Altura del Hero */
+    .hero-principal .hero-contenido {
+        min-height: 400px;
+        gap: 2.5rem;
+    }
+
+    /* Título del Hero */
+    .hero-principal h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Párrafo del Hero */
+    .hero-principal p {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* 21. Diseño Responsive para escritorio */
+/* Media Query desde 992px */
+
+@media (min-width: 992px) {
+
+    /* Tarjetas en cuatro columnas */
+    .rejilla,
+    #ventajas .rejilla {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    /* Contenedor para computadora */
+    .contenedor {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    /* Contenido horizontal */
+    .contenido-flex {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* Columnas del contenido */
+    .columna {
+        flex: 1;
+    }
+
+    /* Títulos de las secciones */
+    .seccion h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Ocultar el menú hamburguesa */
+    .boton-menu {
+        display: none;
+    }
+
+    /* Mostrar el menú horizontal */
+    #menu-principal {
+        display: block;
+        width: auto;
+    }
+
+    /* Enlaces uno al lado del otro */
+    #menu-principal .menu {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    /* Tamaño del Hero */
+    .hero.hero-principal {
+        min-height: 550px;
+        padding: 5rem 0;
+    }
+
+    /* Texto e imagen uno al lado del otro */
+    .hero-principal .hero-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        min-height: 400px;
+    }
+
+    /* Dos columnas del Hero */
+    .hero-principal .hero-texto,
+    .hero-principal .hero-imagen {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* Título grande del Hero */
+    .hero-principal h1 {
+        font-size: 4rem;
+    }
+
+    /* Párrafo del Hero */
+    .hero-principal p {
+        font-size: 1.3rem;
+        max-width: 550px;
+    }
+
+}
