@@ -422,6 +422,24 @@ img {
     font-size: 1rem;
 }
 
+/* Hero de la página Hubs */
+.hero-hubs {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(12, 42, 65, 0.90),
+            rgba(24, 64, 85, 0.65),
+            rgba(40, 90, 110, 0.35)
+        ),
+        url("../img/hub-principal.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 4rem 0;
+}
 
 /* 19. Pie de página */
 

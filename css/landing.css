@@ -271,9 +271,13 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+@media (hover: hover) {
+
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
 }
 
 .tarjeta h3 {
@@ -428,14 +432,15 @@ section {
     margin: 0;
 }
 
+
 /* Botón flotante de WhatsApp */
 .whatsapp-flotante {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     background-color: #25d366;
     color: white;
-    padding: 12px 18px;
+    padding: 8px 12px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -447,11 +452,14 @@ section {
 .whatsapp-flotante:hover {
     background-color: #128c7e;
 }
+
 /* Tamaño del icono de WhatsApp */
 .whatsapp-flotante i {
-    font-size: 32px;
+    font-size: 24px;
     color: white;
 }
+
+
 
 /* Botón ScrollTop */
 #scroll-top {
@@ -508,12 +516,12 @@ section {
 
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(-80px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
 }
@@ -592,3 +600,7 @@ section {
         background-attachment: fixed;
     }
 }
+
+
+
+
